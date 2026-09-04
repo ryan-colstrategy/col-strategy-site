@@ -1,4 +1,4 @@
-# COL Strategy — Website
+# Col Strategy — Website
 
 A static 4-page site (Home, Services, About, Contact) for **colstrategy.com**, built as plain HTML/CSS/JS so it can be hosted directly on GitHub Pages — no build step required.
 
@@ -36,7 +36,7 @@ CNAME                   Tells GitHub Pages this site serves colstrategy.com
    cd col-strategy-site
    git init
    git add .
-   git commit -m "Initial COL Strategy site"
+   git commit -m "Initial Col Strategy site"
    git branch -M main
    git remote add origin https://github.com/YOUR_USERNAME/col-strategy-site.git
    git push -u origin main
