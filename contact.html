@@ -5,6 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact — Col Strategy</title>
 <meta name="description" content="Get in touch with Col Strategy to talk about your go-to-market and growth strategy.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Col Strategy">
+<meta property="og:title" content="Contact — Col Strategy">
+<meta property="og:description" content="Get in touch with Col Strategy to talk about your go-to-market and growth strategy.">
+<meta property="og:url" content="https://colstrategy.com/contact.html">
+<meta property="og:image" content="https://colstrategy.com/assets/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact — Col Strategy">
+<meta name="twitter:description" content="Get in touch with Col Strategy to talk about your go-to-market and growth strategy.">
+<meta name="twitter:image" content="https://colstrategy.com/assets/og-card.png">
 <link rel="icon" href="assets/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,8 +69,37 @@
       </div>
     </div>
 
-    <div class="gform-embed">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeXRCvN_ZirYSNRK5hf15t94iX_oJI8brU6lIM8xyFu01tZrw/viewform?embedded=true" width="100%" height="1700" frameborder="0" marginheight="0" marginwidth="0">Loading&hellip;</iframe>
+    <div class="contact-card">
+      <form id="inquiry-form" class="inquiry-form" action="https://formsubmit.co/ajax/ryan@colstrategy.com" method="POST">
+        <input type="hidden" name="_subject" value="New inquiry from colstrategy.com">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" style="position:absolute;left:-9999px" tabindex="-1" autocomplete="off">
+
+        <div class="field">
+          <label for="cf-name">Name <span class="req">(required)</span></label>
+          <input type="text" id="cf-name" name="Name" required>
+        </div>
+        <div class="field">
+          <label for="cf-email">Email <span class="req">(required)</span></label>
+          <input type="email" id="cf-email" name="Email" required>
+        </div>
+        <div class="field">
+          <label for="cf-company">Company</label>
+          <input type="text" id="cf-company" name="Company">
+        </div>
+        <div class="field">
+          <label for="cf-message">How can we help? <span class="req">(required)</span></label>
+          <textarea id="cf-message" name="Message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+        <p id="form-status" class="form-status" role="status"></p>
+      </form>
+
+      <div id="form-success" class="form-success" hidden>
+        <h3>Thanks &mdash; message sent.</h3>
+        <p>We'll follow up within a couple of business days. In the meantime, feel free to <a href="https://calendly.com/ryan-colstrategy/30min" target="_blank" rel="noopener">grab time on the calendar</a>.</p>
+      </div>
     </div>
 
   </div>
@@ -89,6 +128,41 @@
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 
+  (function () {
+    var form = document.getElementById("inquiry-form");
+    if (!form) return;
+    var status = document.getElementById("form-status");
+    var success = document.getElementById("form-success");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var btn = form.querySelector("button[type=submit]");
+      btn.disabled = true;
+      btn.textContent = "Sending\u2026";
+      status.textContent = "";
+      status.className = "form-status";
+
+      fetch(form.action, {
+        method: "POST",
+        headers: { "Accept": "application/json" },
+        body: new FormData(form)
+      })
+        .then(function (res) {
+          if (!res.ok) throw new Error("Request failed");
+          return res.json();
+        })
+        .then(function () {
+          form.hidden = true;
+          success.hidden = false;
+        })
+        .catch(function () {
+          status.textContent = "Something went wrong sending that \u2014 please email ryan@colstrategy.com directly instead.";
+          status.className = "form-status form-status-error";
+          btn.disabled = false;
+          btn.textContent = "Send";
+        });
+    });
+  })();
 </script>
 </body>
 </html>
