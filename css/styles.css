@@ -414,6 +414,25 @@ section { padding: 88px 0; }
 @media (max-width: 560px) { .field-row { grid-template-columns: 1fr; } }
 
 .inquiry-form .btn { width: 100%; justify-content: center; }
+
+.field-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  margin-top: 0.7em;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  font-weight: 400;
+  cursor: pointer;
+}
+.field-checkbox input[type="checkbox"] {
+  width: 1.1em;
+  height: 1.1em;
+  accent-color: var(--forest-deep);
+  cursor: pointer;
+  flex-shrink: 0;
+  margin: 0;
+}
 .form-status {
   margin-top: 1rem;
   font-size: 0.88rem;
@@ -471,7 +490,8 @@ section { padding: 88px 0; }
 .footer-links { display: flex; gap: 26px; flex-wrap: wrap; }
 .footer-links a { font-size: 0.9rem; color: var(--ink-soft); }
 .footer-links a:hover { color: var(--forest-deep); }
-.footer-note { font-size: 0.82rem; color: var(--stone); margin-top: 26px; text-align: center; }
+.footer-address { font-size: 0.85rem; color: var(--ink-soft); margin-top: 26px; text-align: center; }
+.footer-note { font-size: 0.82rem; color: var(--stone); margin-top: 6px; text-align: center; }
 
 /* ---------- Utility ---------- */
 .mt-lg { margin-top: 3rem; }
