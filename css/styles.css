@@ -19,6 +19,12 @@
   --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
+/* ---------- Per-page accent variations (Extended palette) ---------- */
+/* page-home uses the :root defaults: --forest-deep: #3d151d (Ink Maroon), --forest: #9c2620 (Canyon Red) */
+body.page-services { --forest-deep: #9c2620; --forest: #66602c; } /* Canyon Red surface, Sage Olive accent */
+body.page-about    { --forest-deep: #66602c; --forest: #9c2620; } /* Sage Olive surface, Canyon Red accent */
+body.page-contact  { --forest-deep: #2f79a8; --forest: #3d151d; } /* Canyon Sky surface, Ink Maroon accent */
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
@@ -153,8 +159,9 @@ p:last-child { margin-bottom: 0; }
   height: 2px;
   background: var(--rust);
 }
-.nav-cta { margin-left: 0.6rem; }
+.nav-cta { margin-left: 0.6rem; padding: 0.85em 2rem; }
 .main-nav a.nav-cta.btn-primary { color: var(--paper); }
+body.page-home .main-nav a.nav-cta.btn-primary { border-color: rgba(242, 230, 205, 0.55); }
 
 .nav-toggle {
   display: none;
