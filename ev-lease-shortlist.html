@@ -1,0 +1,661 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><meta name="robots" content="noindex, nofollow"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found]){display:none!important}</style></head><body>
+<title>Large EV Lease Shortlist</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  :root{
+    --bg:#f5f7fa;
+    --surface:#ffffff;
+    --surface-2:#edf1f6;
+    --border:#d8dee6;
+    --border-soft:#e5e9ef;
+    --ink:#131a24;
+    --ink-muted:#57616f;
+    --ink-faint:#8793a3;
+    --accent:#1f5c8b;
+    --accent-strong:#123f5c;
+    --accent-soft:#e4eef6;
+    --positive:#2e7d5c;
+    --positive-soft:#e4f3ec;
+    --negative:#b14a3b;
+    --negative-soft:#fbeae6;
+    --shadow: 0 1px 2px rgba(19,26,36,0.04), 0 8px 24px -12px rgba(19,26,36,0.10);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0e1420;
+      --surface:#141c2b;
+      --surface-2:#1a2536;
+      --border:#2a3547;
+      --border-soft:#212c3d;
+      --ink:#e7ecf3;
+      --ink-muted:#9fabbe;
+      --ink-faint:#6b7a8f;
+      --accent:#7bb9e6;
+      --accent-strong:#a8d1ef;
+      --accent-soft:#1c3349;
+      --positive:#74cca4;
+      --positive-soft:#173229;
+      --negative:#e2917e;
+      --negative-soft:#3a2420;
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px -12px rgba(0,0,0,0.5);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0e1420;
+    --surface:#141c2b;
+    --surface-2:#1a2536;
+    --border:#2a3547;
+    --border-soft:#212c3d;
+    --ink:#e7ecf3;
+    --ink-muted:#9fabbe;
+    --ink-faint:#6b7a8f;
+    --accent:#7bb9e6;
+    --accent-strong:#a8d1ef;
+    --accent-soft:#1c3349;
+    --positive:#74cca4;
+    --positive-soft:#173229;
+    --negative:#e2917e;
+    --negative-soft:#3a2420;
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px -12px rgba(0,0,0,0.5);
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+    line-height:1.5;
+  }
+  .wrap{
+    max-width:1360px;
+    margin:0 auto;
+    padding:48px 28px 80px;
+  }
+
+  /* header */
+  .eyebrow{
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--accent);
+  }
+  h1{
+    font-family:'Big Shoulders Display', 'IBM Plex Sans', sans-serif;
+    font-weight:800;
+    font-size:clamp(34px,5vw,56px);
+    letter-spacing:.01em;
+    text-transform:uppercase;
+    margin:6px 0 10px;
+    text-wrap:balance;
+    color:var(--ink);
+  }
+  .sub{
+    max-width:62ch;
+    color:var(--ink-muted);
+    font-size:16px;
+  }
+  .sub strong{color:var(--ink);font-weight:600;}
+  header.page{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:20px;
+    border-bottom:1px solid var(--border);
+    padding-bottom:28px;
+    margin-bottom:36px;
+  }
+  .asof{
+    text-align:right;
+    font-size:12px;
+    color:var(--ink-faint);
+    white-space:nowrap;
+  }
+  .asof b{display:block;color:var(--ink-muted);font-weight:600;font-size:13px;}
+
+  section{margin-top:52px;}
+  h2{
+    font-family:'Big Shoulders Display','IBM Plex Sans',sans-serif;
+    font-weight:700;
+    font-size:22px;
+    letter-spacing:.03em;
+    text-transform:uppercase;
+    color:var(--ink);
+    margin:0 0 4px;
+  }
+  .section-note{color:var(--ink-muted);font-size:14px;margin-bottom:18px;max-width:70ch;}
+
+  /* table */
+  .table-scroll{
+    overflow-x:auto;
+    border:1px solid var(--border);
+    border-radius:10px;
+    background:var(--surface);
+    box-shadow:var(--shadow);
+  }
+  table{
+    border-collapse:separate;
+    border-spacing:0;
+    width:100%;
+    min-width:1080px;
+  }
+  th,td{
+    text-align:left;
+    padding:13px 16px;
+    border-bottom:1px solid var(--border-soft);
+    vertical-align:top;
+  }
+  thead th{
+    background:var(--surface-2);
+    position:sticky;
+    top:0;
+    z-index:2;
+    border-bottom:1px solid var(--border);
+  }
+  .veh-name{
+    font-weight:700;
+    font-size:14.5px;
+    color:var(--ink);
+    white-space:nowrap;
+  }
+  .veh-tag{
+    display:block;
+    font-weight:500;
+    font-size:11px;
+    letter-spacing:.03em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-top:2px;
+  }
+  tbody th{
+    background:var(--surface);
+    position:sticky;
+    left:0;
+    z-index:1;
+    font-weight:600;
+    font-size:13px;
+    color:var(--ink-muted);
+    white-space:nowrap;
+    border-right:1px solid var(--border);
+  }
+  thead th:first-child{
+    position:sticky;
+    left:0;
+    top:0;
+    z-index:3;
+    border-right:1px solid var(--border);
+  }
+  tbody tr:last-child td, tbody tr:last-child th{border-bottom:none;}
+  tbody tr:nth-child(even) td{background:color-mix(in srgb, var(--surface-2) 45%, transparent);}
+
+  .spec-val{
+    font-family:'IBM Plex Mono', ui-monospace, monospace;
+    font-variant-numeric:tabular-nums;
+    font-size:13.5px;
+    color:var(--ink);
+    white-space:nowrap;
+  }
+  .spec-unit{
+    font-family:'IBM Plex Sans',sans-serif;
+    color:var(--ink-faint);
+    font-size:11.5px;
+    margin-left:2px;
+  }
+  .spec-sub{
+    display:block;
+    font-family:'IBM Plex Sans',sans-serif;
+    color:var(--ink-faint);
+    font-size:11.5px;
+    margin-top:2px;
+    white-space:normal;
+    max-width:22ch;
+  }
+
+  /* cards */
+  .cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
+    gap:16px;
+  }
+  .card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:20px 20px 18px;
+    box-shadow:var(--shadow);
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  .card-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;}
+  .card-head h3{
+    font-family:'Big Shoulders Display','IBM Plex Sans',sans-serif;
+    font-weight:700;
+    font-size:20px;
+    letter-spacing:.01em;
+    text-transform:uppercase;
+    color:var(--ink);
+    margin:0;
+  }
+  .card-price{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12.5px;
+    color:var(--accent-strong);
+    white-space:nowrap;
+    font-weight:500;
+  }
+  .card-summary{
+    font-size:14px;
+    color:var(--ink-muted);
+    border-left:2px solid var(--accent);
+    padding-left:12px;
+  }
+  .pc{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+  }
+  .pc h4{
+    font-size:10.5px;
+    font-weight:700;
+    letter-spacing:.09em;
+    text-transform:uppercase;
+    margin:0 0 6px;
+  }
+  .pc.pros h4{color:var(--positive);}
+  .pc .cons h4{color:var(--negative);}
+  .pc ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;}
+  .pc li{
+    font-size:12.5px;
+    color:var(--ink-muted);
+    padding-left:14px;
+    position:relative;
+    line-height:1.4;
+  }
+  .pros li::before{
+    content:"+";
+    position:absolute;left:0;top:0;
+    color:var(--positive);
+    font-weight:700;
+    font-family:'IBM Plex Mono',monospace;
+  }
+  .cons li::before{
+    content:"\2013";
+    position:absolute;left:0;top:0;
+    color:var(--negative);
+    font-weight:700;
+    font-family:'IBM Plex Mono',monospace;
+  }
+
+  /* notes */
+  .notes{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:22px 24px;
+    box-shadow:var(--shadow);
+  }
+  .notes ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;}
+  .notes li{
+    font-size:13.5px;
+    color:var(--ink-muted);
+    padding-left:18px;
+    position:relative;
+  }
+  .notes li::before{
+    content:"\203a";
+    position:absolute;left:0;top:0;
+    color:var(--accent);
+    font-weight:700;
+  }
+  .notes li strong{color:var(--ink);font-weight:600;}
+
+  footer{
+    margin-top:48px;
+    padding-top:20px;
+    border-top:1px solid var(--border);
+    font-size:11.5px;
+    color:var(--ink-faint);
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  @media (max-width:640px){
+    .wrap{padding:32px 16px 60px;}
+    header.page{flex-direction:column;align-items:flex-start;}
+    .asof{text-align:left;}
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="page">
+    <div>
+      <div class="eyebrow">Southern California &middot; Lease Shortlist</div>
+      <h1>Large AWD, Long-Range EVs</h1>
+      <p class="sub">Ten electric SUVs and vans with an <strong>all-wheel-drive</strong> option &mdash; specs, lease math, and what owners and reviewers actually say, side by side. Most are large, three-row, and clear 300+ miles of range; the Ioniq 5, ID. Buzz, and Rivian R2 are the exceptions, included for charging speed, cargo flexibility, and value respectively.</p>
+    </div>
+    <div class="asof"><b>Compiled Sept 7, 2026</b>SoCal market &middot; figures shift monthly, see notes</div>
+  </header>
+
+  <section>
+    <h2>Specifications</h2>
+    <p class="section-note">Sorted by starting MSRP, low to high. Scroll right for the full lineup &mdash; the spec column stays pinned.</p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th style="min-width:120px;">Spec</th>
+            <th><span class="veh-name">Hyundai Ioniq 5</span><span class="veh-tag">Fastest charging &middot; not 3-row</span></th>
+            <th><span class="veh-name">Rivian R2</span><span class="veh-tag">Cheapest &middot; not 3-row</span></th>
+            <th><span class="veh-name">Kia EV9</span><span class="veh-tag">Best value (3-row)</span></th>
+            <th><span class="veh-name">Hyundai Ioniq 9</span><span class="veh-tag">Most space</span></th>
+            <th><span class="veh-name">VW ID. Buzz</span><span class="veh-tag">Most distinctive</span></th>
+            <th><span class="veh-name">Volvo EX90</span><span class="veh-tag">Calmest cruiser</span></th>
+            <th><span class="veh-name">Rivian R1S</span><span class="veh-tag">Most capable</span></th>
+            <th><span class="veh-name">Lucid Gravity</span><span class="veh-tag">Longest range</span></th>
+            <th><span class="veh-name">Tesla Model X</span><span class="veh-tag">Quickest / most chargers</span></th>
+            <th><span class="veh-name">Cadillac Escalade IQ</span><span class="veh-tag">Biggest / flagship</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">MSRP</th>
+            <td><span class="spec-val">$35,000&ndash;46,275</span><span class="spec-sub">SE Standard Range RWD &rarr; XRT AWD; AWD trims start ~$41.5k</span></td>
+            <td><span class="spec-val">$53,990&ndash;57,990</span><span class="spec-sub">Premium AWD &rarr; Performance AWD; RWD trims ($45k&ndash;48.5k) arrive 2027</span></td>
+            <td><span class="spec-val">$54,900&ndash;73,900</span><span class="spec-sub">Light RWD &rarr; GT AWD</span></td>
+            <td><span class="spec-val">$60,555&ndash;79,090</span><span class="spec-sub">S &rarr; Calligraphy Design</span></td>
+            <td><span class="spec-val">$61,545&ndash;69,995</span><span class="spec-sub">Pro S RWD &rarr; 1st Edition 4MOTION; AWD adds ~$4,500</span></td>
+            <td><span class="spec-val">$76,695&ndash;89,845</span><span class="spec-sub">Single Motor &rarr; Performance Ultra</span></td>
+            <td><span class="spec-val">$76,990&ndash;121,990</span><span class="spec-sub">Dual Standard &rarr; Quad</span></td>
+            <td><span class="spec-val">$79,900&ndash;96,550</span><span class="spec-sub">Touring &rarr; Grand Touring</span></td>
+            <td><span class="spec-val">$99,990&ndash;114,990</span><span class="spec-sub">Base &rarr; Plaid</span></td>
+            <td><span class="spec-val">$127,405&ndash;151,205</span><span class="spec-sub">IQ &rarr; IQL Premium Sport</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Lease, as advertised</th>
+            <td><span class="spec-val">$439&ndash;489/mo</span><span class="spec-sub">XRT &middot; Limited AWD &middot; $3,999 due &middot; 24 mo &middot; 7,500 mi/yr</span></td>
+            <td><span class="spec-val">$829/mo</span><span class="spec-sub">Performance &middot; $5,724 due &middot; 36 mo &middot; 10k mi/yr</span></td>
+            <td><span class="spec-val">$409&ndash;469/mo</span><span class="spec-sub">$3,999 due &middot; 24 mo &middot; 10k mi/yr</span></td>
+            <td><span class="spec-val">~$419/mo</span><span class="spec-sub">$4,999 due &middot; 36 mo (recent offer)</span></td>
+            <td><span class="spec-val">~$838/mo</span><span class="spec-sub">RWD, $5,838 due &middot; 24 mo &middot; 10k mi/yr &mdash; 2025MY holdover</span></td>
+            <td><span class="spec-val">~$800&ndash;900/mo</span><span class="spec-sub">via leasing brokers &mdash; confirm w/ dealer</span></td>
+            <td><span class="spec-val">$779/mo</span><span class="spec-sub">$8,674 due &middot; 36 mo &middot; 10k mi/yr</span></td>
+            <td><span class="spec-val">~$1,099/mo</span><span class="spec-sub">Grand Touring &middot; $9,499 due &middot; 36 mo</span></td>
+            <td><span class="spec-val">~$999/mo</span><span class="spec-sub">est. Dual Motor &mdash; Tesla has no dealer-style specials</span></td>
+            <td><span class="spec-val">$2,464/mo</span><span class="spec-sub">$3,500 due &middot; 48 mo &middot; 10k mi/yr</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Seats</th>
+            <td><span class="spec-val">5</span><span class="spec-sub">2-row only &mdash; compact crossover, smallest here</span></td>
+            <td><span class="spec-val">5</span><span class="spec-sub">2-row only &mdash; smaller than the rest of this list</span></td>
+            <td><span class="spec-val">6&ndash;7</span></td>
+            <td><span class="spec-val">6&ndash;7</span></td>
+            <td><span class="spec-val">7</span></td>
+            <td><span class="spec-val">6 or 7</span></td>
+            <td><span class="spec-val">7</span></td>
+            <td><span class="spec-val">5 or 7</span></td>
+            <td><span class="spec-val">5, 6, or 7</span></td>
+            <td><span class="spec-val">7</span></td>
+          </tr>
+          <tr>
+            <th scope="row">EPA range</th>
+            <td><span class="spec-val">259&ndash;290<span class="spec-unit">mi</span></span><span class="spec-sub">AWD trims; RWD reaches 318 mi</span></td>
+            <td><span class="spec-val">330<span class="spec-unit">mi</span></span><span class="spec-sub">both AWD trims; 2027 RWD Long Range rated 345 mi</span></td>
+            <td><span class="spec-val">230&ndash;304<span class="spec-unit">mi</span></span><span class="spec-sub">RWD Long Range tops the AWD trims</span></td>
+            <td><span class="spec-val">311&ndash;335<span class="spec-unit">mi</span></span></td>
+            <td><span class="spec-val">231&ndash;234<span class="spec-unit">mi</span></span><span class="spec-sub">shortest here; RWD &amp; AWD nearly identical</span></td>
+            <td><span class="spec-val">~300&ndash;310<span class="spec-unit">mi</span></span></td>
+            <td><span class="spec-val">270&ndash;371<span class="spec-unit">mi</span></span><span class="spec-sub">Quad Motor range TBD</span></td>
+            <td><span class="spec-val">337&ndash;450<span class="spec-unit">mi</span></span><span class="spec-sub">Touring &rarr; Grand Touring</span></td>
+            <td><span class="spec-val">335&ndash;352<span class="spec-unit">mi</span></span></td>
+            <td><span class="spec-val">~460<span class="spec-unit">mi</span></span><span class="spec-sub">Cadillac-estimated</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Cargo</th>
+            <td><span class="spec-val">27.2<span class="spec-unit">ft&sup3;</span></span><span class="spec-sub">behind rear seats &mdash; minimal frunk, awkward shape</span></td>
+            <td><span class="spec-val">90.1<span class="spec-unit">ft&sup3;</span></span><span class="spec-sub">total enclosed (frunk + trunk) &mdash; no 3rd row to measure behind</span></td>
+            <td><span class="spec-val">20.2<span class="spec-unit">ft&sup3;</span></span><span class="spec-sub">behind 3rd row &middot; 81.7 ft&sup3; max</span></td>
+            <td><span class="spec-val">21.9<span class="spec-unit">ft&sup3;</span></span><span class="spec-sub">behind 3rd row &middot; 86.9 ft&sup3; max</span></td>
+            <td><span class="spec-val">9.6&ndash;11.8<span class="spec-unit">ft&sup3;</span></span><span class="spec-sub">behind 3rd row (smallest) &middot; up to 145.5 ft&sup3; with rows removed</span></td>
+            <td><span class="spec-val">11.0<span class="spec-unit">ft&sup3;</span></span><span class="spec-sub">behind 3rd row &middot; 75.4 ft&sup3; max</span></td>
+            <td><span class="spec-val">17.7<span class="spec-unit">ft&sup3;</span></span><span class="spec-sub">behind 3rd row &middot; 104.7 ft&sup3; max</span></td>
+            <td><span class="spec-val">48<span class="spec-unit">ft&sup3;</span></span><span class="spec-sub">behind 2nd row &middot; 120 ft&sup3; incl. frunk</span></td>
+            <td><span class="spec-val">21.3<span class="spec-unit">ft&sup3;</span></span><span class="spec-sub">behind 3rd row (7-seat) &middot; 87.3 ft&sup3; max</span></td>
+            <td><span class="spec-val">23.6<span class="spec-unit">ft&sup3;</span></span><span class="spec-sub">behind 3rd row &middot; 119.1 ft&sup3; max + 12.2 eTrunk</span></td>
+          </tr>
+          <tr>
+            <th scope="row">DC fast charge</th>
+            <td><span class="spec-val">&lt;20<span class="spec-unit">min</span></span><span class="spec-sub">10&ndash;80% &middot; 350 kW, 800V &mdash; fastest here</span></td>
+            <td><span class="spec-val">29<span class="spec-unit">min</span></span><span class="spec-sub">10&ndash;80% via NACS</span></td>
+            <td><span class="spec-val">24<span class="spec-unit">min</span></span><span class="spec-sub">10&ndash;80%</span></td>
+            <td><span class="spec-val">~24<span class="spec-unit">min</span></span><span class="spec-sub">10&ndash;80% &middot; 350 kW</span></td>
+            <td><span class="spec-val">~26<span class="spec-unit">min</span></span><span class="spec-sub">10&ndash;80% &middot; 200 kW peak, slowest here</span></td>
+            <td><span class="spec-val">22&ndash;25<span class="spec-unit">min</span></span><span class="spec-sub">10&ndash;80% &middot; 2026 800V update, up to 350 kW</span></td>
+            <td><span class="spec-val">27&ndash;38<span class="spec-unit">min</span></span><span class="spec-sub">10&ndash;80%</span></td>
+            <td><span class="spec-val">21&ndash;25<span class="spec-unit">min</span></span><span class="spec-sub">10&ndash;80% &middot; up to 300+ kW peak</span></td>
+            <td><span class="spec-val">25&ndash;40<span class="spec-unit">min</span></span><span class="spec-sub">10&ndash;80% on Supercharger</span></td>
+            <td><span class="spec-val">n/a</span><span class="spec-sub">not published &middot; Cadillac cites 117 mi added per 10 min</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Max tow</th>
+            <td><span class="spec-val">2,700<span class="spec-unit">lb</span></span><span class="spec-sub">XRT AWD w/ factory hitch only &mdash; other trims not tow-rated</span></td>
+            <td><span class="spec-val">4,400<span class="spec-unit">lb</span></span><span class="spec-sub">w/ tow package</span></td>
+            <td><span class="spec-val">2,000&ndash;5,000<span class="spec-unit">lb</span></span><span class="spec-sub">RWD &middot; AWD w/ tow pkg</span></td>
+            <td><span class="spec-val">5,000<span class="spec-unit">lb</span></span><span class="spec-sub">AWD w/ tow pkg</span></td>
+            <td><span class="spec-val">2,700<span class="spec-unit">lb</span></span><span class="spec-sub">4MOTION AWD only &mdash; RWD not tow-rated</span></td>
+            <td><span class="spec-val">4,850<span class="spec-unit">lb</span></span></td>
+            <td><span class="spec-val">7,700<span class="spec-unit">lb</span></span></td>
+            <td><span class="spec-val">6,000<span class="spec-unit">lb</span></span><span class="spec-sub">Grand Touring</span></td>
+            <td><span class="spec-val">5,000<span class="spec-unit">lb</span></span></td>
+            <td><span class="spec-val">7,300&ndash;8,000<span class="spec-unit">lb</span></span><span class="spec-sub">IQL &middot; IQ</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>The take</h2>
+    <p class="section-note">What reviewers and owners consistently flag, condensed to what actually differs between these seven.</p>
+    <div class="cards">
+
+      <div class="card">
+        <div class="card-head"><h3>Hyundai Ioniq 5</h3><span class="card-price">from $439/mo (AWD)</span></div>
+        <p class="card-summary">A compact crossover, not a 3-row large SUV either &mdash; but it charges faster than anything else on this list (under 20 minutes 10&ndash;80%) and ties the R2 for the cheapest AWD entry point. The XRT trim adds genuine off-road hardware at the cost of range.</p>
+        <div class="pc">
+          <div class="pros"><h4>Pros</h4><ul>
+            <li>Fastest 10&ndash;80% DC charging of every vehicle on this list</li>
+            <li>Cheapest AWD entry point alongside the R2</li>
+            <li>XRT adds a real lift, all-terrain tires, and terrain drive modes</li>
+          </ul></div>
+          <div class="cons"><h4>Cons</h4><ul>
+            <li>Only 5 seats, no third row &mdash; the smallest, most compact vehicle here</li>
+            <li>XRT's off-road gear cuts range to 259 mi and roughens the ride</li>
+            <li>Only the XRT is tow-rated, and only to 2,700 lb with a factory hitch</li>
+          </ul></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h3>Rivian R2</h3><span class="card-price">from $829/mo</span></div>
+        <p class="card-summary">Rivian's smaller, 5-seat sibling to the R1S &mdash; not actually large or three-row like the rest of this list, but it undercuts every other AWD long-range EV here on price. Only the top Performance trim is shipping today.</p>
+        <div class="pc">
+          <div class="pros"><h4>Pros</h4><ul>
+            <li>Cheapest AWD long-range EV on this list by a wide margin</li>
+            <li>656-hp Performance AWD: 3.6s 0&ndash;60 with 29-min 10&ndash;80% charging</li>
+            <li>R1S-level build/off-road reputation in a smaller footprint</li>
+          </ul></div>
+          <div class="cons"><h4>Cons</h4><ul>
+            <li>Only 5 seats, no third row &mdash; a genuinely smaller vehicle than the rest of this list</li>
+            <li>Current lease ($829/mo) runs close to the much larger R1S's, blunting the value case</li>
+            <li>Cheaper Premium AWD and RWD trims don't ship until late 2026/2027 &mdash; today it's Performance or nothing</li>
+          </ul></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h3>Kia EV9</h3><span class="card-price">from $409/mo</span></div>
+        <p class="card-summary">The value play &mdash; genuine 3-row room and Kia's fastest charging for roughly two-thirds the price of the rest of this list.</p>
+        <div class="pc">
+          <div class="pros"><h4>Pros</h4><ul>
+            <li>Spacious, well-finished 3-row cabin</li>
+            <li>24-min fast charging matches pricier rivals</li>
+            <li>Quiet at speed; strong feature-for-dollar value</li>
+          </ul></div>
+          <div class="cons"><h4>Cons</h4><ul>
+            <li>Big footprint, unwieldy in tight SoCal parking</li>
+            <li>Driver-assist alerts are persistent and intrusive</li>
+            <li>Cabin materials feel plain next to luxury rivals</li>
+          </ul></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h3>Hyundai Ioniq 9</h3><span class="card-price">from ~$419/mo</span></div>
+        <p class="card-summary">The roomiest cabin and cargo hold here, with genuinely quick charging &mdash; at a real premium over Hyundai's own gas Palisade.</p>
+        <div class="pc">
+          <div class="pros"><h4>Pros</h4><ul>
+            <li>Adult-usable third row and best cargo-behind-3rd-row figure</li>
+            <li>350 kW charging, one of the fastest here</li>
+            <li>Solid, well-equipped interior build</li>
+          </ul></div>
+          <div class="cons"><h4>Cons</h4><ul>
+            <li>~$20k more than a comparable Palisade</li>
+            <li>CarPlay/SiriusXM and split-screen infotainment quirks</li>
+            <li>Lane-keep assist reads as overly intrusive</li>
+          </ul></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h3>VW ID. Buzz</h3><span class="card-price">from ~$838/mo (2025MY)</span></div>
+        <p class="card-summary">The most distinctive thing on this list and the cleverest packaging &mdash; up to 145.5 ft&sup3; with the rows pulled out &mdash; but the shortest range, slowest charging, and lightest tow rating here, and the US is skipping the 2026 model year entirely.</p>
+        <div class="pc">
+          <div class="pros"><h4>Pros</h4><ul>
+            <li>Standout retro-modern design and genuinely flexible seating/cargo</li>
+            <li>Removable third row unlocks van-like max cargo room</li>
+            <li>4MOTION AWD adds real traction and 335 hp for ~$4,500</li>
+          </ul></div>
+          <div class="cons"><h4>Cons</h4><ul>
+            <li>Shortest range (231&ndash;234 mi) and slowest charging (200 kW) here</li>
+            <li>Lowest tow rating (2,700 lb) &mdash; and RWD isn't tow-rated at all</li>
+            <li>Skips MY2026 in the US; current stock is leftover 2025MY ahead of a 2027 redesign</li>
+          </ul></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h3>Volvo EX90</h3><span class="card-price">~$800&ndash;900/mo (broker est.)</span></div>
+        <p class="card-summary">The calmest, most Volvo-like experience of the group &mdash; refined and safety-forward, but the shortest cargo hold and lowest tow rating here.</p>
+        <div class="pc">
+          <div class="pros"><h4>Pros</h4><ul>
+            <li>Smooth, quiet cruiser with premium materials</li>
+            <li>Class-leading driver-assist and safety sensor suite</li>
+            <li>2026's 800V update brings genuinely fast charging</li>
+          </ul></div>
+          <div class="cons"><h4>Cons</h4><ul>
+            <li>Just 11 ft&sup3; behind the third row &mdash; tight for luggage</li>
+            <li>Heavy reliance on touchscreen for basics like mirrors</li>
+            <li>Lowest max tow rating (4,850 lb) of the seven</li>
+          </ul></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h3>Rivian R1S</h3><span class="card-price">$779/mo</span></div>
+        <p class="card-summary">The most capable and quickest-feeling of the group on- and off-road, with a tow rating built for real trailers.</p>
+        <div class="pc">
+          <div class="pros"><h4>Pros</h4><ul>
+            <li>Genuine off-road ability plus refined daily manners</li>
+            <li>7,700 lb tow rating, best outside the Escalade IQ</li>
+            <li>Strong build quality and over-the-air support</li>
+          </ul></div>
+          <div class="cons"><h4>Cons</h4><ul>
+            <li>Nearly everything routes through the touchscreen</li>
+            <li>Slowest 10&ndash;80% charge time on this list</li>
+            <li>Base trim's 270-mi range is the shortest here</li>
+          </ul></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h3>Lucid Gravity</h3><span class="card-price">~$1,099/mo (Grand Touring)</span></div>
+        <p class="card-summary">The range and efficiency leader by a wide margin, and reviewers say it drives smaller than its size &mdash; but Lucid's software polish still lags.</p>
+        <div class="pc">
+          <div class="pros"><h4>Pros</h4><ul>
+            <li>450-mi Grand Touring range, longest of the group</li>
+            <li>Handles like a sedan despite 3-row SUV size</li>
+            <li>Spacious, genuinely usable third row for adults</li>
+          </ul></div>
+          <div class="cons"><h4>Cons</h4><ul>
+            <li>Owners report app freezes and navigation glitches</li>
+            <li>Driver-assist trails Tesla/GM's systems</li>
+            <li>Least-proven brand; some features ship "later"</li>
+          </ul></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h3>Tesla Model X</h3><span class="card-price">~$999/mo (est.)</span></div>
+        <p class="card-summary">The quickest and best-networked for road trips via Supercharger &mdash; but the shortest range and tightest third row on this list.</p>
+        <div class="pc">
+          <div class="pros"><h4>Pros</h4><ul>
+            <li>Largest, most reliable DC fast-charging network</li>
+            <li>Strong performance; flexible 5/6/7-seat configs</li>
+            <li>Frequent OTA feature and software updates</li>
+          </ul></div>
+          <div class="cons"><h4>Cons</h4><ul>
+            <li>Shortest EPA range of the seven</li>
+            <li>Third row is tight, best for kids on longer trips</li>
+            <li>Long-running build-quality and panel-gap complaints</li>
+          </ul></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h3>Cadillac Escalade IQ</h3><span class="card-price">$2,464/mo</span></div>
+        <p class="card-summary">The biggest, longest-range, and most tow-capable vehicle here &mdash; priced and sized like the flagship it is.</p>
+        <div class="pc">
+          <div class="pros"><h4>Pros</h4><ul>
+            <li>~460-mi estimated range with an 8,000 lb tow rating</li>
+            <li>Full-size 3-row comfort; Super Cruise hands-free driving</li>
+            <li>55-inch curved display and genuinely premium features</li>
+          </ul></div>
+          <div class="cons"><h4>Cons</h4><ul>
+            <li>9,100+ lb curb weight blunts handling despite 750 hp</li>
+            <li>Most controls buried in the touchscreen, not buttons</li>
+            <li>Public DC fast-charging sessions run into triple digits</li>
+          </ul></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>Before you sign, in California</h2>
+    <div class="notes">
+      <ul>
+        <li><strong>No state EV rebate applies here.</strong> CVRP closed to new applicants in November 2023; the remaining state programs (Clean Cars 4 All, DCAP) are income-qualified and unlikely to apply to a lease in this price range.</li>
+        <li><strong>The federal $7,500 credit is gone</strong> &mdash; for both purchases and leases &mdash; as of September 30, 2025. Any "$7,500 credit" in a current lease offer (Rivian, Cadillac) is manufacturer-funded incentive cash, not a tax credit.</li>
+        <li><strong>No more solo carpool-lane access.</strong> California's Clean Air Vehicle HOV decal program expired October 1, 2025, so a new EV lease no longer comes with single-occupant carpool-lane eligibility.</li>
+        <li><strong>Lease figures above are snapshots, not quotes.</strong> Money factor, residual value, and manufacturer lease cash shift monthly and by credit tier &mdash; treat every number here as a starting point to confirm with SoCal dealers, not a locked rate.</li>
+        <li><strong>Charge times assume a compatible high-power DC fast charger</strong> at or near ideal battery temperature; real-world sessions (Electrify America, EVgo) commonly run longer, especially in summer heat.</li>
+        <li><strong>The ID. Buzz you'd lease today is 2025 model-year stock.</strong> Volkswagen is skipping the US 2026 model year and holding the next update for 2027 &mdash; expect leftover-inventory dealer discounts, but also thinner color/trim selection.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <span>Specs and reviews compiled from manufacturer sites, Edmunds, Car and Driver, Top Gear, Consumer Reports, and Electrek, September 2026.</span>
+    <span>Verify current pricing, incentives, and lease terms with dealers before signing.</span>
+  </footer>
+
+</div>
+
+</body></html>
